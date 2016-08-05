@@ -1,0 +1,12 @@
+mongodb:
+  host: mongodb://heroku_s2gdc6gq:heroku_s2gdc6gq@ds029565.mlab.com:29565/heroku_s2gdc6gq
+#   "mongodb://localhost:27017/chripper-test"
+logging:
+  microservice: alectronic-chipper
+  team: alectronic
+  environment: local
+#healthcheck:
+#  environment: PACKAGES_ENVIRONMENT
+#  project: PACKAGES_PROJECT
+#  name: PACKAGES_NAME
+#  version: PACKAGES_VERSION

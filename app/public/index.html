@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CHRIP</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
+		<script src="javascripts/angmod.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="stylesheets/style.css" />
+	</head>
+	<body ng-app="myApp">
+		<nav class="navbar-fluid navbar-default navbar-fixed-top">
+				<div class="container">
+					<a class="navbar-brand" href="#/"> CHRIP!! </a>
+					<p class="navbar-text"> Learn Mean Stack by building tiny bird app...</p>
+					<p class="navbar-right navbar-text" ng-hide="authenticated"><a href="#/login">LOGIN</a> OR <a href="#/reg">REGISTER</a></p>
+					<p class="navbar-right navbar-text" ng-show="authenticated"><a href="#/" ng-click="logout()">LOGOUT</a></p>
+					<p class="navbar-right navbar-text" ng-show="authenticated">HI {{current_user}} !!!!</p>
+				</div>
+		</nav>
+
+
+		<div class="col-md-offset-2 col-md-8">
+
+			<div ng-view></div>
+
+		</div>
+  </body>
+</html>

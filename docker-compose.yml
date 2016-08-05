@@ -1,0 +1,31 @@
+---
+version: '2.1'
+
+services:
+  em-api-gateway-web:
+    build:
+      context: .
+    environment:
+      - NODE_ENV=development
+      - PORT=8080
+      - MONGODB_HOST=mongodb://heroku_s2gdc6gq:heroku_s2gdc6gq@ds029565.mlab.com:29565/heroku_s2gdc6gq
+#      logging env vars
+      - ROOT_APPENDER=JSON_CONSOLE
+      - LOG_OUTPUT=single
+      - JSON_CONSOLE_PRETTY_PRINT=false
+      - REFORM_SERVICE_TYPE=node
+      - REFORM_SERVICE_NAME=alectronic-chipper
+      - REFORM_TEAM=alectronic
+      - REFORM_ENVIRONMENT=docker
+#      healthcheck env vars
+      - PACKAGES_ENVIRONMENT=docker
+      - PACKAGES_PROJECT=alectronic
+      - PACKAGES_NAME=alectronic-chipper
+      - PACKAGES_VERSION=unknown
+#    links:
+#     - mongodb
+#    depends_on:
+#     - mongodb
+  port:
+  - 8080:8080
+

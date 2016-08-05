@@ -1,0 +1,8 @@
+<form class="form-auth" ng-submit="register()">
+  <h1>REGISTER</h1>
+  <p class="text-warning"> {{error_message}} </p>
+  <input required type="username" ng-model="user.username" placeholder="USERNAME" class="form-control"/>
+  <input required type="password" ng-model="user.password" placeholder="PASSWORD" class="form-control"/>
+  <input type="submit" value="Register" class="btn btn-primary" />
+  Did you mean <a href="#/login">Login</a>?
+</form>
