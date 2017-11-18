@@ -1,4 +1,5 @@
-# Alectronic-chripper
+# Alectronic-chripper 
+[![Build Status](https://travis-ci.org/alectronic0/alectronic-chripper.svg?branch=master)](https://travis-ci.org/alectronic0/alectronic-chripper)
 
 ## intro
 
