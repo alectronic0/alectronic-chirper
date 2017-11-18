@@ -5,6 +5,8 @@ const { healthcheck, localHealth } = require('../health/healthcheck.js')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.locals.asset_path="/public/";
+
 //    console.log("request is " + req.user.username);
     res.render('index', { title: "Chirp"});
 });

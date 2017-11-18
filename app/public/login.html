@@ -1,8 +1,30 @@
-<form class="form-auth" ng-submit="login()">
-  <h1>LOGIN</h1>
-  <p class="text-warning"> {{error_message}} </p>
-  <input required type="username" ng-model="user.username" placeholder="USERNAME" class="form-control"/>
-  <input required type="password" ng-model="user.password" placeholder="PASSWORD" class="form-control"/>
-  <input type="submit" value="login" class="btn btn-primary" />
-  Did you mean <a href="#/reg">register</a>?
-</form>
+  <div class="column-two-thirds">
+    <form name="loginForm" class="form" ng-submit="login()">
+      <h1 class="heading-large">Login</h1>
+      <p class="lede">Sign in to get started.</p>
+      <div class="form-group ">
+        <label for="username">
+          <span class="form-label-bold">Username</span>
+          <span class="error-message">{{error_message}}</span>
+        </label>
+        <input required type="username" ng-model="user.username" placeholder="USERNAME" class="form-control" id="username" value="">
+      </div>
+      <div class="form-group ">
+        <label for="password">
+          <span class="form-label-bold">Password</span>
+          <span class="error-message">{{error_message}}</span>
+        </label>
+        <input equired type="password" ng-model="user.password" placeholder="PASSWORD" class="form-control" id="password">
+      </div>
+      <div>
+        <!--<a href="#/=">Forgotten password? (Currently not implemented) :(</a>-->
+        Forgotten password? (Currently not implemented) :(
+      </div>
+      <div class="form-group">
+        <input class="button" type="submit" value="Sign in">
+      </div>
+
+      Did you mean <a href="#/reg">register</a>?
+
+    </form>
+  </div>

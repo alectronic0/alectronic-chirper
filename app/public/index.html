@@ -1,30 +1,100 @@
-<!doctype html>
-<html>
-	<head>
-		<title>CHRIP</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
-		<script src="javascripts/angmod.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="stylesheets/style.css" />
-	</head>
-	<body ng-app="myApp">
-		<nav class="navbar-fluid navbar-default navbar-fixed-top">
-				<div class="container">
-					<a class="navbar-brand" href="#/"> CHRIP!! </a>
-					<p class="navbar-text"> Learn Mean Stack by building tiny bird app...</p>
-					<p class="navbar-right navbar-text" ng-hide="authenticated"><a href="#/login">LOGIN</a> OR <a href="#/reg">REGISTER</a></p>
-					<p class="navbar-right navbar-text" ng-show="authenticated"><a href="#/" ng-click="logout()">LOGOUT</a></p>
-					<p class="navbar-right navbar-text" ng-show="authenticated">HI {{current_user}} !!!!</p>
-				</div>
-		</nav>
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>Alectronic-Chipper</title>
+
+        <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="/public/stylesheets/govuk-template.css?0.23.0"/><!--<![endif]-->
+        <!--[if IE 6]><link rel="stylesheet" media="screen" href="/public/stylesheets/govuk-template-ie6.css?0.23.0"/><![endif]-->
+        <!--[if IE 7]><link rel="stylesheet" media="screen" href="/public/stylesheets/govuk-template-ie7.css?0.23.0"/><![endif]-->
+        <!--[if IE 8]><link rel="stylesheet" media="screen" href="/public/stylesheets/govuk-template-ie8.css?0.23.0"/><![endif]-->
+        <link rel="stylesheet" media="print" href="/public/stylesheets/govuk-template-print.css?0.23.0"/>
+
+        <!--[if IE 8]><link rel="stylesheet" media="all" href="/public/stylesheets/fonts-ie8.css?0.23.0"/><![endif]-->
+        <!--[if gte IE 9]><!--><link rel="stylesheet" media="all" href="/public/stylesheets/fonts.css?0.23.0"/><!--<![endif]-->
+        <!--[if lt IE 9]><script src="/public/javascripts/ie.js?0.23.0"></script><![endif]-->
+
+        <link rel="shortcut icon" href="/public/images/favicon.ico?0.23.0" type="image/x-icon" />
+
+        <link rel="mask-icon" href="/public/images/gov.uk_logotype_crown.svg?0.23.0" color="#0b0c0c">
+        <link rel="apple-touch-icon" sizes="180x180" href="/public/images/apple-touch-icon-180x180.png?0.23.0">
+        <link rel="apple-touch-icon" sizes="167x167" href="/public/images/apple-touch-icon-167x167.png?0.23.0">
+        <link rel="apple-touch-icon" sizes="152x152" href="/public/images/apple-touch-icon-152x152.png?0.23.0">
+        <link rel="apple-touch-icon" href="/public/images/apple-touch-icon.png?0.23.0">
 
 
-		<div class="col-md-offset-2 col-md-8">
+        <meta name="theme-color" content="#0b0c0c" />
 
-			<div ng-view></div>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="/public/images/opengraph-image.png?0.23.0">
 
-		</div>
-  </body>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
+        <script src="javascripts/angmod.js"></script>
+        <link href="/public/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+        <script src="/public/javascripts/vendor/polyfills/bind.js"></script>
+        <script src="/public/javascripts/govuk/details.polyfill.js"></script>
+        <script src="/public/javascripts/govuk/shim-links-with-button-role.js"></script>
+        <script src="/public/javascripts/govuk/show-hide-content.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+        <header role="banner" id="global-header">
+            <div class="header-wrapper">
+                <div class="header-proposition">
+                    <div class="content">
+                        <p id="proposition-name">CHRIP!! - Learn Mean Stack by building tiny bird app...</p>
+                        <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+                        <nav id="proposition-menu">
+                            <ul id="proposition-links">
+                                <li ng-hide="authenticated"><a href="#/login">LOGIN</a></li>
+                                <li ng-hide="authenticated"><a href="#/reg">REGISTER</a></li>
+                                <li ng-show="authenticated"><a href="#/" ng-click="logout()">LOGOUT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="col-md-offset-3 col-md-8">
+            <main id="content" role="main">
+                <div class="phase-banner-alpha">
+                    <p>
+                        <strong class="phase-tag">ALPHA</strong>
+                        <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+                    </p>
+                </div>
+                <div class="grid-row">
+                    <div class="column">
+                        <p ng-show="authenticated">HI {{current_user}} !!!!</p>
+                        <div ng-view></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+        <footer class="group js-footer" id="footer" role="contentinfo">
+
+            <div class="footer-wrapper">
+                <div class="footer-meta">
+                    <div class="footer-meta-inner">
+                        <div class="open-government-licence">
+                            <p>Some content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">
+                                    Open Government Licence v3.0</a></p>
+                        </div>
+                    </div>
+
+                    <div class="copyright">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/public/javascripts/govuk-template.js?0.23.0"></script>
+    </body>
 </html>

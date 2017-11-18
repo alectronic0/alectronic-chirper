@@ -2,7 +2,7 @@
 version: '2.1'
 
 services:
-  em-api-gateway-web:
+  alectronic-chripper:
     build:
       context: .
     environment:
@@ -14,18 +14,19 @@ services:
       - LOG_OUTPUT=single
       - JSON_CONSOLE_PRETTY_PRINT=false
       - REFORM_SERVICE_TYPE=node
-      - REFORM_SERVICE_NAME=alectronic-chipper
+      - REFORM_SERVICE_NAME=alectronic-chripper
       - REFORM_TEAM=alectronic
       - REFORM_ENVIRONMENT=docker
 #      healthcheck env vars
       - PACKAGES_ENVIRONMENT=docker
       - PACKAGES_PROJECT=alectronic
-      - PACKAGES_NAME=alectronic-chipper
+      - PACKAGES_NAME=alectronic-chripper
       - PACKAGES_VERSION=unknown
 #    links:
 #     - mongodb
 #    depends_on:
 #     - mongodb
-  port:
-  - 8080:8080
+    ports:
+      - 8080:8080
+
 

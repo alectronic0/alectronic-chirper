@@ -4,9 +4,13 @@ FROM node:9
 WORKDIR /usr/src/app
 
 # Bundle app source
+COPY package.json yarn.lock /usr/src/app/
+RUN yarn install
+
 COPY . .
+RUN yarn setup
 RUN ./fakeversion.sh
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD [ "yarn", "start" ]

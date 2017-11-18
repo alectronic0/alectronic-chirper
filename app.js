@@ -25,6 +25,19 @@ var app = express();
 app.set('views', path.join(__dirname,'app', 'views'));
 app.set('view engine', 'ejs');
 
+app.use(express.static(path.join(__dirname, 'app','public')));
+
+app.use('/public', express.static(path.join(__dirname,'app','assets', 'public')));
+app.use('/public', express.static(path.join(__dirname, 'node_modules','govuk_frontend_toolkit')));
+app.use('/public/images/icons', express.static(path.join(__dirname, 'node_modules','govuk_frontend_toolkit','images')));
+
+// govuk_template_jinja
+app.use('/public', express.static(path.join(__dirname, 'node_modules','govuk_template_jinja','assets')));
+
+// Elements refers to icon folder instead of images folder
+app.use(favicon(path.join(__dirname, 'node_modules', 'govuk_template_jinja', 'assets', 'images', 'favicon.ico')));
+
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logging.express.accessLogger());
@@ -32,7 +45,6 @@ app.use(session({secret: 'super duper secret'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'app','public')));
 app.use(passport.initialize());
 app.use(passport.session());
 
