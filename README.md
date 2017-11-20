@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/alectronic0/alectronic-chripper.svg?branch=master)](https://travis-ci.org/alectronic0/alectronic-chripper) 
 [![codecov](https://codecov.io/gh/alectronic0/alectronic-chripper/branch/master/graph/badge.svg)](https://codecov.io/gh/alectronic0/alectronic-chripper)
 [![dependencies Status](https://david-dm.org/alectronic0/alectronic-chripper/status.svg)](https://david-dm.org/alectronic0/alectronic-chripper)
-
+[![devDependencies Status](https://david-dm.org/alectronic0/alectronic-chripper/dev-status.svg)](https://david-dm.org/alectronic0/alectronic-chripper?type=dev)
 ## intro
 
 This is basic program twitter clone using the MEAN Stack & GDS tool kits.
