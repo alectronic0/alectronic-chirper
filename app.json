@@ -7,7 +7,7 @@
   ],
   "website": "http://alectronic-chirper.herokuapp.com/",
   "repository": "https://github.com/alectronic0/alectronic-chirper",
-  "logo": "",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
   "success_url": "/",
   "scripts": {},
   "env": {
