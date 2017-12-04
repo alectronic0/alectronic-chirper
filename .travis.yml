@@ -5,5 +5,10 @@ sudo: false
 node_js:
   - "node"
 
+install:
+  - npm install
+script:
+  - npm test
+
 after_success:
   - ./bin/codecov -e TRAVIS_NODE_VERSION -f coverage/coverage.json
