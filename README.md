@@ -1,6 +1,7 @@
 # Alectronic-chripper 
 [![Build Status](https://travis-ci.org/alectronic0/alectronic-chripper.svg?branch=master)](https://travis-ci.org/alectronic0/alectronic-chripper) 
 [![codecov](https://codecov.io/gh/alectronic0/alectronic-chripper/branch/master/graph/badge.svg)](https://codecov.io/gh/alectronic0/alectronic-chripper)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dee9dee88033402086c7b70a2425c124)](https://www.codacy.com/app/alectronic0/alectronic-chirper)
 [![dependencies Status](https://david-dm.org/alectronic0/alectronic-chripper/status.svg)](https://david-dm.org/alectronic0/alectronic-chripper)
 [![devDependencies Status](https://david-dm.org/alectronic0/alectronic-chripper/dev-status.svg)](https://david-dm.org/alectronic0/alectronic-chripper?type=dev)
 
