@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@hmcts/nodejs-healthcheck": "^1.4.3",
-    "@hmcts/nodejs-logging": "^1.4.2",
+    "@hmcts/nodejs-logging": "^2.0.0",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.2",
     "config": "^1.28.1",
