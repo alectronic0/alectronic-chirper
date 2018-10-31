@@ -5,4 +5,6 @@ ignore: {}
 patch:
   'npm:tunnel-agent:20170305':
     - '@hmcts/nodejs-logging > log4js > loggly > request > tunnel-agent':
-        patched: '2018-10-23T23:00:18.996Z'
+        patched: '2018-06-25T21:40:21.744Z'
+    - node-sass > request > tunnel-agent:
+        patched: '2018-06-25T21:40:21.744Z'
