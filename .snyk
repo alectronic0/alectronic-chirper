@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.12.0
+version: v1.13.3
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -8,3 +8,12 @@ patch:
         patched: '2018-06-25T21:40:21.744Z'
     - node-sass > request > tunnel-agent:
         patched: '2018-06-25T21:40:21.744Z'
+  'npm:extend:20180424':
+    - '@hmcts/nodejs-logging > log4js > mailgun-js > proxy-agent > https-proxy-agent > extend':
+        patched: '2019-01-02T21:43:42.964Z'
+    - '@hmcts/nodejs-logging > log4js > mailgun-js > proxy-agent > http-proxy-agent > extend':
+        patched: '2019-01-02T21:43:42.964Z'
+    - '@hmcts/nodejs-logging > log4js > mailgun-js > proxy-agent > pac-proxy-agent > https-proxy-agent > extend':
+        patched: '2019-01-02T21:43:42.964Z'
+    - '@hmcts/nodejs-logging > log4js > mailgun-js > proxy-agent > pac-proxy-agent > http-proxy-agent > extend':
+        patched: '2019-01-02T21:43:42.964Z'
